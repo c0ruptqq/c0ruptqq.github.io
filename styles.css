@@ -156,6 +156,7 @@ body{
     align-items: center;
     margin-left:1em;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
 .text{
     margin-left: 1rem;
@@ -313,7 +314,9 @@ form button:hover{
     transition-delay: 500ms;
 }
 */
-
+section{
+    transition-duration: 300ms;
+}
 
 /* RESPONSIVE */
 @media only screen and (min-width: 800px) {

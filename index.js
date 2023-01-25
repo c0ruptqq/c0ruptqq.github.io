@@ -51,3 +51,38 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElemenets = document.querySelectorAll('.hidden');
 hiddenElemenets.forEach((el) => observer.observe(el));
+
+/* SCROLL SKEW EFFECT*/
+const maxSkew = 15;
+const maxRotate = 5;
+
+let currentPosition = window.pageYOffset;
+
+function skewEffect() {
+  const newPosition = window.pageYOffset;
+  const dif = newPosition - currentPosition;
+
+  let skew = dif * 0.8;
+  let rotate = dif * 0.2;
+  if (skew > maxSkew || skew < -maxSkew) {
+    if (skew > 0) {
+      skew = maxSkew;
+    } else if (skew < 0) {
+      skew = -maxSkew;
+    }
+  }
+  if (rotate > maxRotate || rotate < -maxRotate) {
+    if (rotate > 0) {
+      rotate = maxRotate;
+    } else if (skew < 0) {
+      rotate = -maxRotate;
+    }
+  }
+  document.querySelectorAll('section').forEach(el =>  {
+    el.style.transform = `skewY(${skew}deg) rotateY(${rotate}deg)`;
+  });
+  currentPosition = newPosition;
+  requestAnimationFrame(skewEffect);
+}
+
+skewEffect();
