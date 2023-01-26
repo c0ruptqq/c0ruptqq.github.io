@@ -51,8 +51,8 @@ const hiddenElemenets = document.querySelectorAll('.hidden');
 hiddenElemenets.forEach((el) => observer.observe(el));
 
 /* SCROLL SKEW EFFECT*/
-const maxSkew = 10;
-const maxRotate = 5;
+const maxSkew = 20;
+const maxRotate = 20;
 
 let currentPosition = window.pageYOffset;
 
@@ -61,7 +61,7 @@ function skewEffect() {
   const dif = newPosition - currentPosition;
 
   let skew = dif * 0.8;
-  let rotate = dif * 0.2;
+  let rotate = dif * 2;
   if (skew > maxSkew || skew < -maxSkew) {
     if (skew > 0) {
       skew = maxSkew;
