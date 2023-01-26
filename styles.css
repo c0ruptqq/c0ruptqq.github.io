@@ -93,6 +93,7 @@ body{
     font-size: 5rem;
     position: absolute;
     display: flex;
+    top: 0;
     -webkit-text-stroke: 3px var(--color);
 }
 .landing p:before {
