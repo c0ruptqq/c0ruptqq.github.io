@@ -86,11 +86,13 @@ function skewEffect() {
 skewEffect();
 
 /* PRE LOADER */
-const loader = document.querySelector('.preloader')
-window.addEventListener("load", () => {
-  loader.classList.add("preloader--hidden")
+const preloader = document.querySelector('.preloader')
+const loader = document.querySelector('.loader')
 
-  loader.addEventListener("transitionend", () => {
-      loader.removeChild(loader);
+window.addEventListener("load", () => {
+  preloader.classList.add("preloader--hidden")
+
+  preloader.addEventListener("transitionend", () => {
+    loader.remove();
   });
 });
