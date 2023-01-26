@@ -3,7 +3,6 @@ function sendEmail(){
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        number: document.getElementById("phone").value,
         message: document.getElementById("message").value,
     };
     const serviceID = "service_5njuenm";
@@ -14,7 +13,6 @@ function sendEmail(){
             res =>{
                 document.getElementById("name").value= "";
                 document.getElementById("email").value= "";
-                document.getElementById("phone").value= "";
                 document.getElementById("message").value= "";
                 console.log(res);
                 alert("your message sent succesfully");
