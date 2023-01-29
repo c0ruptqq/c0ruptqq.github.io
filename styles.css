@@ -57,7 +57,8 @@ svg{
     overflow: hidden;
     line-height: 0;
     display: flex;
-    vertical-align:top
+    vertical-align:top;
+    margin-top: -5px;
 }
 
 .custom-shape-divider-top-1674771726 svg {
@@ -74,7 +75,7 @@ svg{
 
 .spacer{
     position: relative;
-    aspect-ratio: 900/200;
+    aspect-ratio: 300/200;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -83,7 +84,7 @@ svg{
 }
 .layer1{
     position: absolute;
-    margin-top: 0;
+    margin-top: -5px;
     background-image: url(img/layered-waves-haikei.svg);
 }
 /* PRE LOADER */
