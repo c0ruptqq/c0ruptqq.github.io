@@ -34,7 +34,7 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', false)
     }
 });
-/* SCROLL EFFECT */
+/* SCROLL EFFECT - APPEAR ON SCREEN*/
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -50,7 +50,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElemenets = document.querySelectorAll('.hidden');
 hiddenElemenets.forEach((el) => observer.observe(el));
 
-/* SCROLL SKEW EFFECT*/
+/* SCROLL SKEW EFFECT NOT CURRENTLY USED*/
 const maxSkew = 20;
 const maxRotate = 20;
 
@@ -76,7 +76,7 @@ function skewEffect() {
       rotate = -maxRotate;
     }
   }
-  document.querySelectorAll('section').forEach(el =>  {
+  document.querySelectorAll('.skew').forEach(el =>  {
     el.style.transform = `skewY(${skew}deg) rotateY(${rotate}deg)`;
   });
   currentPosition = newPosition;

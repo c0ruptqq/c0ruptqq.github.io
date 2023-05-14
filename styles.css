@@ -7,7 +7,8 @@ html::-webkit-scrollbar {
     --bg: #222222;
     --prim: #BC4B51;
     /*--scnd: #94B0DA; */
-    --scnd: #63768D;
+    --scnd: #7678ED;
+    --scndDark: #47488C;
     --blck: black;
 }
 *{
@@ -72,11 +73,12 @@ body{
     flex-direction: row-reverse;
 }
 .nav{
+    position: fixed;
     transform: translateX(130%);
     display: flex;
     flex-direction: column;
     background-color: var(--scnd);
-    border-radius: 2em;
+    border-radius: 15px;
     z-index: 1000;
 }
 .nav ul li{
@@ -101,6 +103,7 @@ body{
     display: block;
     position: absolute;
     z-index: 9999;
+    position: fixed;
     background: url(img/hamburger.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -156,7 +159,7 @@ body{
 .landing p{
     color: var(--bg);
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 5rem;
+    font-size: 7rem;
     position: absolute;
     display: flex;
     top: 0;
@@ -237,11 +240,12 @@ body{
 .hero p{
     font-size: 2rem;
 }
-img{
+.hero img{
     margin: 0;
     padding: 0;
     aspect-ratio: 1;
     width: 50em;
+    z-index: 99;
 }
 
 /* STUDIES */
@@ -265,7 +269,7 @@ img{
     min-height: 100vh;
 }
 .studies h1{
-    font-size: 3em;
+    font-size: 7em;
     display: flex;
     justify-content: center
 
@@ -299,7 +303,7 @@ img{
     justify-content: center;
 }
 form{
-    background: var(--scnd);
+    background: var(--scndDark);
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
@@ -308,7 +312,7 @@ form{
     border-radius: 10px;
 }
 form h1{
-    color: var(--bg);
+    color: var(--color);
     background-color: inherit;
     font-weight: 800;
     margin-bottom: 20px;
@@ -393,10 +397,11 @@ section{
 }
 
 /* RESPONSIVE */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .hero{
         flex-direction: row-reverse;
         flex-wrap: nowrap;
+        justify-content: center
     }
     .landing p{
         font-size: 10rem;

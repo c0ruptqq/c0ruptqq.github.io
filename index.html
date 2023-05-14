@@ -54,53 +54,51 @@
     </div>
 </div>-->
     <section>
-    <div class="hero" id="hero">
-        <img src="img/moon.png" alt="moon">
+        <div class="hero" id="hero">
+            <img src="img/moon.png" alt="moon">
             <div class="text hidden">
                 <h1>Hi. I am Maksym.</h1>
-                <p>I am a Ukrainain computer science student based in London with a passion for UI/UX design, web development and programming</p>
+                <p>I am a Ukrainain computer science student with an interetst in UI/UX design, web development and programming</p>
                 <a href="#contact" class="hidden">contact me</a>  
-
             </div>    
-
-    </div>
-</section>
+        </div>
+    </section>
 
     <section class="hidden">
-    <div class="studies" id="studies">
-        <h1>Studies</h1>
-        <ul>
-            <li class="logo hidden"><a href="pages/ruby_isle/index.html" target="_blank">Ruby isle smoothies</a></li>
-            <li class="logo hidden"><a href="pages/todo/index.html" target="_blank">ToDo WebApp</a></li>
-        </ul>
-    </div>
+        <div class="studies" id="studies">
+            <h1>Studies</h1>
+            <ul>
+                <li class="logo hidden"><a href="pages/ruby_isle/index.html" target="_blank">Ruby isle smoothies</a></li>
+                <li class="logo hidden"><a href="pages/todo/index.html" target="_blank">ToDo WebApp</a></li>
+            </ul>
+        </div>
     </section>
-    <div class="contact_page" id="contact">
+        <div class="contact_page" id="contact">
+            <div class="container">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h1>Contact</h1>
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" rows="4" placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
 
-        <div class="container">
-            <form onsubmit="sendEmail(); reset(); return false;">
-                <h1>Contact</h1>
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <textarea id="message" rows="4" placeholder="Message"></textarea>
-                <button type="submit">Send</button>
-
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="footer" id="footer">
-        <div class="social_links">
-            <a href="https://github.com/c0ruptqq" target="_blank">
-                    <i class="fa fa-github icon"></i>
-            </a>
-            <a href="https://www.fiverr.com/maxmoon23" target="_blank">
-                    <i class="fa fa-shopping-cart icon"></i>
-            </a>
-            <a href="mailto:max.d.astapov@gmail.com">
-                    <i class="fa fa-envelope icon"></i>
-            </a>
+        <div class="footer" id="footer">
+            <div class="social_links">
+                <a href="https://github.com/c0ruptqq" target="_blank">
+                        <i class="fa fa-github icon"></i>
+                </a>
+                <a href="https://www.fiverr.com/maxmoon23" target="_blank">
+                        <i class="fa fa-shopping-cart icon"></i>
+                </a>
+                <a href="mailto:max.d.astapov@gmail.com">
+                        <i class="fa fa-envelope icon"></i>
+                </a>
+            </div>
         </div>
-    </div>
+        
     <script src="index.js"></script>  
     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
