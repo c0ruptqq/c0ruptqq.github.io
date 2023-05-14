@@ -361,6 +361,9 @@ form button:hover{
     color: var(--prim);
     transition: 1s;
 }
+.social_links a{
+    text-decoration: none;
+}
 
 .hidden {
     opacity: 0;
